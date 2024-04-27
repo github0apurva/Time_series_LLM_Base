@@ -23,7 +23,7 @@ def get_tokenizer(model):
     name_parts = model.split("-")
     model_size = name_parts[0]
     chat = len(name_parts) > 1
-    assert model_size in ["7b", "13b", "70b"]
+    assert model_size in ["7b", "8b", "13b", "70b"]
 
     tokenizer = LlamaTokenizer.from_pretrained(
         llama2_model_string(model_size, chat),
@@ -50,7 +50,7 @@ def get_model_and_tokenizer(model_name, cache_model=False):
     model_size = name_parts[0]
     chat = len(name_parts) > 1
 
-    assert model_size in ["7b", "13b", "70b"]
+    assert model_size in ["7b", "8b", "13b", "70b"]
 
     tokenizer = get_tokenizer(model_name)
 
