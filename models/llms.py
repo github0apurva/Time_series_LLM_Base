@@ -40,6 +40,7 @@ completion_fns = {
     'llama-7b-chat': partial(llama_completion_fn, model='7b-chat'),
     'llama-13b-chat': partial(llama_completion_fn, model='13b-chat'),
     'llama-70b-chat': partial(llama_completion_fn, model='70b-chat'),
+    'Meta-Llama-3-8B': partial(llama_completion_fn, model='8b'),
 }
 
 # Optional: NLL/D functions for each model
@@ -72,6 +73,7 @@ nll_fns = {
     'llama-7b-chat': partial(llama_nll_fn, model='7b-chat'),
     'llama-13b-chat': partial(llama_nll_fn, model='13b-chat'),
     'llama-70b-chat': partial(llama_nll_fn, model='70b-chat'),
+    'Meta-Llama-3-8B': partial(llama_nll_fn, model='8b'),
 }
 
 # Optional: Tokenization function for each model, only needed if you want automatic input truncation.
@@ -94,6 +96,7 @@ tokenization_fns = {
     'llama-7b-chat': partial(llama_tokenize_fn, model='7b-chat'),
     'llama-13b-chat': partial(llama_tokenize_fn, model='13b-chat'),
     'llama-70b-chat': partial(llama_tokenize_fn, model='70b-chat'),
+    'Meta-Llama-3-8B': partial(llama_tokenize_fn, model='8b'),
 }
 
 # Optional: Context lengths for each model, only needed if you want automatic input truncation.
@@ -110,4 +113,5 @@ context_lengths = {
     'llama-7b-chat': 4096,
     'llama-13b-chat': 4096,
     'llama-70b-chat': 4096,
+    'Meta-Llama-3-8B': 4096,
 }
